@@ -1,0 +1,27 @@
+.animated-headline {
+  display: inline;
+}
+
+.animated-headline__part {
+  opacity: 0;
+  transform: translateY(0.55em);
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.animated-headline[data-visible='true'] .animated-headline__part {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animated-headline__part > span {
+  display: inline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animated-headline__part {
+    opacity: 1;
+    transform: none;
+  }
+}

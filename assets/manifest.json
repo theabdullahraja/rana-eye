@@ -1,0 +1,24 @@
+{
+  "name": "Rana Øyelegesenter",
+  "short_name": "Rana Øye",
+  "description": "Spesialisert øyeklinikk i Mo i Rana. Toppmoderne øyebehandlinger og personlig oppfølging.",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#f5f9fc",
+  "background_color": "#f5f9fc",
+  "lang": "nb-NO",
+  "icons": [
+    {
+      "src": "/images/icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

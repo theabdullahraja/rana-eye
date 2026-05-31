@@ -1,0 +1,40 @@
+# ── Dependencies ────────────────────────────────────────────
+node_modules/
+
+# ── Build output ─────────────────────────────────────────────
+dist/
+dist-ssr/
+
+# ── TypeScript ───────────────────────────────────────────────
+*.tsbuildinfo
+
+# ── Environment / secrets ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ── Internal AI / planning files ─────────────────────────────
+# GSD session state, handoff files, codebase analysis docs
+.planning/
+
+# Internal design specs and migration plans (dev tooling only)
+docs/
+
+# Old reference design — not part of the codebase
+_archive/
+
+# ── Editor / OS ──────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.local
+.vscode/
+.idea/
+
+# ── Claude Code local config ─────────────────────────────────
+.claude/settings.local.json
+
+# ── Logs ─────────────────────────────────────────────────────
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*

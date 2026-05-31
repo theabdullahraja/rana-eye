@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply font-sans text-ink bg-surface antialiased;
+    min-height: 100dvh;
+    overflow-x: hidden;
+  }
+
+  a  { @apply text-inherit no-underline; }
+  button { cursor: pointer; border: none; background: none; padding: 0; }
+  ul, ol { list-style: none; margin: 0; padding: 0; }
+  img { display: block; max-width: 100%; }
+  h1,h2,h3,h4,h5,h6 { @apply font-display font-bold text-ink leading-tight; margin: 0; }
+  p { margin: 0; }
+}
+
+@layer utilities {
+  .divider {
+    @apply w-12 h-1 rounded-full bg-primary my-4;
+  }
+
+  .section-label {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 text-xs font-bold uppercase tracking-widest rounded-full bg-primary-dim text-primary mb-4;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+  }
+}
+
+/* Badge dot pulse animation (Hero section) */
+@keyframes badge-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(1,152,205,0.45); }
+  50%       { box-shadow: 0 0 0 5px rgba(1,152,205,0); }
+}
+
+.badge-pulse {
+  animation: badge-pulse 2.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-pulse { animation: none; }
+  html { scroll-behavior: auto; }
+}
